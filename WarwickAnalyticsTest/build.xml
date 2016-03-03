@@ -1,0 +1,17 @@
+<project name="WarwickAnalyticsTest" default="build-war" basedir=".">
+
+ <target name="build-war">
+
+   <war destfile="WarwickAnalyticsTest.war" webxml="WebContent/WEB-INF/web.xml">
+      <fileset dir="WebContent">
+         <include name="**/*.*"/>
+      </fileset>
+      
+      <lib dir="WebContent/WEB-INF/lib"/>
+      
+      <classes dir="build/classes"/>
+   </war>
+   
+</target>
+
+</project>
