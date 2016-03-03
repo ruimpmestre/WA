@@ -1,0 +1,39 @@
+<project name="WarwickAnalyticsTest" default="all" basedir=".">
+
+	<!-- IMPORTANT VARIABLE HERE -->
+	<property name="build.dir" value="${basedir}" />
+	<path id="class.path">
+		<fileset dir=".">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+
+	<target name="build-war">
+
+   		<war destfile="WarwickAnalyticsTest.war" webxml="WebContent/WEB-INF/web.xml">
+      		<fileset dir="WebContent">
+         		<include name="**/*.*"/>
+      		</fileset>
+      
+      		<lib dir="WebContent/WEB-INF/lib"/>
+      
+      		<classes dir="build/classes"/>
+   		</war>
+   
+	</target>
+
+	<!-- COMPILE TARGET -->
+	<target name="compile" >
+		<javac includeantruntime="false" destdir="build/classes" debug="true" source="1.8">
+			<src path="src/com/warwickanalytics/process" />
+			<src path="src/com/warwickanalytics/services" />
+			<classpath refid="class.path"/>
+		</javac>
+	</target>
+
+
+	<target name="all"
+        depends="compile,build-war"/>
+
+</project>
