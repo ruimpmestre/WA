@@ -48,8 +48,7 @@ After uncompressing the file containig the development there are two approaches 
     
   - Launch your prefered Web Browser
   - Access the following URL: http://localhost:8080/WarwickAnalyticsTest/
-  - Use the application according to the Programming Test Feature Specification
-
+  - Use the application according to the Programming Test Feature Specification (examples are available in folder 'test-data')
 
 * Development Indications
 
